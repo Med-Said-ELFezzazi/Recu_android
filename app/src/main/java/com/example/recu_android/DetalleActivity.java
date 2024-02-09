@@ -2,6 +2,8 @@ package com.example.recu_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,9 +41,11 @@ public class DetalleActivity extends AppCompatActivity {
                 try {
                   //  db.execSQL("DELETE FROM Libro WHERE isbn = ?", new String[]{String.valueOf()});
                     db.setTransactionSuccessful();
-                    Toast.makeText(DetalleActivity.this, "Libro eliminado correctamente", Toast.LENGTH_SHORT).show();
+                    dialogo("Libro eliminado correctamente");
+                    //Actualizar
+
                 } catch (Exception e) {
-                    Toast.makeText(DetalleActivity.this, "Error al eliminar el libro", Toast.LENGTH_SHORT).show();
+                    dialogo("Error al eliminar el libro");
                 } finally {
                     db.endTransaction();
                 }
@@ -51,10 +55,26 @@ public class DetalleActivity extends AppCompatActivity {
 
 
 
+
+
         //msg al log
         Log.i("EXTRA_TEXTO: ",EXTRA_TEXTO);
         Log.i("paso: ",getIntent().getStringExtra(EXTRA_TEXTO));
         Log.i("AAA: ",getIntent().getClass().toString());
         detalle.mostrarDetalle(getIntent().getStringExtra(EXTRA_TEXTO));
+    }
+
+
+    private void dialogo(String msj) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle(msj);
+
+        alertDialogBuilder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+
+        alertDialogBuilder.show();
     }
 }

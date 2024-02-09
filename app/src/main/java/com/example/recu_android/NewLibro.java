@@ -2,6 +2,8 @@ package com.example.recu_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,10 +52,11 @@ public class NewLibro extends AppCompatActivity {
                         BibliotecaDAO dao = new BibliotecaDAO();
                         dao.nuevoLibro(bibliodbh, Integer.parseInt(isbn.getText().toString().trim()), titulo.getText().toString(), autor.getText().toString(), editorial.getText().toString());
                         vaciar();
-                        Toast.makeText(NewLibro.this, "Libro añadido correctamente", Toast.LENGTH_SHORT).show();
+                        dialogo("Libro añadido correctamente");
                     }
                     else{
-                        Toast.makeText(NewLibro.this, "El isbn tiene que ser numerico", Toast.LENGTH_SHORT).show();
+                        dialogo("El isbn tiene que ser numerico");
+                        // vaciar el campo isbn
                         isbn.setText("");
                     }
                 }
@@ -90,5 +93,20 @@ public class NewLibro extends AppCompatActivity {
         if(editorial.getText().toString().trim().equals(""))
             return true;
         return false;
+    }
+
+
+
+    private void dialogo(String msj) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle(msj);
+
+        alertDialogBuilder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+
+        alertDialogBuilder.show();
     }
 }
