@@ -32,12 +32,12 @@ public class DetalleActivity extends AppCompatActivity {
             }
         });
 
-     /*   btnEliminar.setOnClickListener(new View.OnClickListener() {
+       btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 db.beginTransaction();
                 try {
-                    db.execSQL("DELETE FROM Libro WHERE isbn = ?", new String[]{String.valueOf()});
+                  //  db.execSQL("DELETE FROM Libro WHERE isbn = ?", new String[]{String.valueOf()});
                     db.setTransactionSuccessful();
                     Toast.makeText(DetalleActivity.this, "Libro eliminado correctamente", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
@@ -46,13 +46,13 @@ public class DetalleActivity extends AppCompatActivity {
                     db.endTransaction();
                 }
             }
-        });*/
+        });
 
 
 
 
         //msg al log
-        Log.i("valor EXTRA_TEXTO: ",EXTRA_TEXTO);
+        Log.i("EXTRA_TEXTO: ",EXTRA_TEXTO);
         Log.i("paso: ",getIntent().getStringExtra(EXTRA_TEXTO));
         Log.i("AAA: ",getIntent().getClass().toString());
         detalle.mostrarDetalle(getIntent().getStringExtra(EXTRA_TEXTO));
