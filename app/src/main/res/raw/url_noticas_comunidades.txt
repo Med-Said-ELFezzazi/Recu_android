@@ -1,0 +1,6 @@
+Andalucia;https://ep00.epimg.net/rss/ccaa/andalucia.xml
+Cataluña;https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/subsection/catalunya
+Comunidad Valenciana;https://ep00.epimg.net/rss/ccaa/valencia.xml
+Madrid;https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/subsection/madrid
+Pais Vasco;https://ep00.epimg.net/rss/ccaa/paisvasco.xml
+Galicia;https://ep00.epimg.net/rss/ccaa/galicia.xml

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Recu_android</string>
+    <string name="Salir">"Salir"</string>
+    <string name="Base_de_Datos_SQLite">Base de dato SQLite</string>
+    <string name="Noticias_de..." translatable="false">Noticias de ....</string>
+    <string name="menu_principal">"MENU PRINCIPAL"</string>
+    <string name="titulo">TITULO</string>
+    <string name="listado_de_libros">Listado de libros</string>
+    <string name="volver">volver</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancelar">cancelar</string>noticias_pais
+    <string name="elimina">eliminar</string>informaci_n_detallada_del_libro
+    <string name="informacion_detallada_del_libro">información_detallada del libro</string>
+    <string name="noticias_pais">NOTICIAS EL PAIS</string>
+    <string name="selecciona_una_comunidad_autonoma">Selecciona una comunidad autonoma:</string>
+    <string name="DATOS_NUEVO_LIBRO">DATOS NUEVO LIBRO</string>
+    <string name="noticias_de_autonoma">Noticias de ... </string>AUTOR
+    <string name="INSERTAR">INSERTAR</string>
+    <string name="ISBN">ISBN</string>
+    <string name="AUTOR">AUTOR</string>
+    <string name="mi_base_de_datos_de_libros">mi base de datos de libros</string>
+    <string name="EDITORIAL">EDITORIAL</string>
+    <string name="Nuevo_libro">Nuevo libro</string>
+    <string name="Buscar_libros">Buscar libros</string>
+    <string name="Listado_libros">Listado libros</string>
+</resources>
